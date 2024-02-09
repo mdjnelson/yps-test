@@ -15,4 +15,5 @@
 4. Run `composer install`.
 5. Run `php artisan key:generate`.
 6. Run `./vendor/bin/sail up -d`.
-7. Visit `http://localhost`.
+7. Run `./vendor/bin/sail artisan migrate --seed`.
+8. Visit `http://localhost`.
