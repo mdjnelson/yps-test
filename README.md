@@ -18,4 +18,4 @@
 7. Run `./vendor/bin/sail artisan migrate --seed`.
 8. Run `./vendor/bin/sail npm install`.
 9. Run `./vendor/bin/sail npm run dev`.
-10. Visit `http://localhost`.
+10. Visit `http://localhost` and log in with the email `test@example.com` and password `password`.
