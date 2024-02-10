@@ -16,4 +16,6 @@
 5. Run `php artisan key:generate`.
 6. Run `./vendor/bin/sail up -d`.
 7. Run `./vendor/bin/sail artisan migrate --seed`.
-8. Visit `http://localhost`.
+8. Run `./vendor/bin/sail npm install`.
+9. Run `./vendor/bin/sail npm run dev`.
+10. Visit `http://localhost`.
