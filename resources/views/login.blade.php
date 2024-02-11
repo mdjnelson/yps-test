@@ -11,6 +11,11 @@
         <h2 class="text-2xl font-semibold mb-4">Login</h2>
         <form method="POST" action="{{ route('login.process') }}">
             @csrf
+            @if ($errors->has('email'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $errors->first('email') }}</strong>
+                </span>
+            @endif
             <div class="mb-4">
                 <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email Address</label>
                 <input id="email" type="email" name="email" class="border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 rounded-md shadow-sm w-full" required>
