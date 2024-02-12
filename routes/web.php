@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\IndexController;
@@ -20,4 +19,3 @@ Route::get('/', [IndexController::class, 'index']);
 Route::post('/', [IndexController::class, 'search'])->name('search');
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'login'])->name('login.process');
-Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');

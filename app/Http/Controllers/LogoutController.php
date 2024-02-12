@@ -10,12 +10,10 @@ class LogoutController extends BaseController
 {
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('sanctum')->user()->tokens()->delete();
 
         $request->session()->invalidate();
 
         $request->session()->regenerateToken();
-
-        return redirect()->route('login');
     }
 }

@@ -19,21 +19,6 @@ class IndexController extends BaseController
 
     public function search(Request $request)
     {
-        $query = $request->input('search');
-
-        $request = Request::create(route('getDataFromApi'), 'GET', ['search' => $query]);
-
-        $dataResponse = app()->handle($request);
-
-        if ($dataResponse->isSuccessful()) {
-            $beers = (array)$dataResponse->getOriginalContent();
-            if (!empty($beers)) {
-                return view('index', ['beers' => $beers]);
-            }
-
-            return view('index', ['beers' => []]);
-        }
-
-        return view('index', ['error' => 'Error fetching data ...']);
+        return view('index');
     }
 }

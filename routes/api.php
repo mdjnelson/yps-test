@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DataController;
+use App\Http\Controllers\LogoutController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,4 +19,5 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
     Route::controller(DataController::class)->group(function () {
         Route::get('beers', 'getDataFromApi')->name('getDataFromApi');
     });
+    Route::get('/logout', [LogoutController::class, 'logout'])->name('logout');
 });
