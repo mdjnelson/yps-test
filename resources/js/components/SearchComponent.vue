@@ -46,7 +46,7 @@
                         </div>
                     </div>
                 </template>
-                <template v-else>
+                <template v-if="searchPerformed && beers.length === 0">
                     <div class="text-center py-12">
                         <h2 class="text-3xl font-bold text-red-500 mb-4">Not Found</h2>
                         <p class="text-gray-600">Sorry, we couldn't find any beers matching that name.</p>
@@ -71,7 +71,8 @@ export default {
         return {
             searchQuery: '',
             beers: [],
-            isLoading: false
+            isLoading: false,
+            searchPerformed: false
         };
     },
     methods: {
@@ -93,6 +94,7 @@ export default {
             }
         },
         handleSearch() {
+            this.searchPerformed = true;
             clearTimeout(this.timer);
             this.timer = setTimeout(() => {
                 this.fetchSearchResults();
