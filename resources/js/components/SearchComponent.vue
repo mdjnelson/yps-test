@@ -23,7 +23,7 @@
                 <template v-if="beers && beers.length > 0">
                     <div v-for="beer in beers" :key="beer.id" class="p-4 md:w-1/2 lg:w-2/5 xl:w-1/3">
                         <div class="bg-white rounded-lg shadow overflow-hidden">
-                            <img v-if="beer.imageUrl" :src="beer.imageUrl" alt="Beer image" class="w-1/4 h-auto mx-auto object-scale-down">
+                            <img v-if="beer.imageUrl" :src="beer.imageUrl" alt="Beer image" class="w-1/4 h-auto mx-auto object-scale-down pt-4">
                             <div class="p-6">
                                 <h2 class="title-font text-lg font-medium">{{ beer.name }}</h2>
                                 <p class="mt-1"><span class="font-bold">Tagline:</span> {{ beer.tagline }}</p>
