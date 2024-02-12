@@ -4,21 +4,21 @@ namespace App\Models;
 
 class Beer
 {
-    public string $name;
+    protected string $name;
 
-    public string $tagline;
+    protected string $tagline;
 
-    public string $description;
+    protected string $description;
 
-    public float $abv;
+    protected float $abv;
 
-    public ?float $ibu;
+    protected ?float $ibu;
 
-    public array $foodPairing;
+    protected array $foodPairing;
 
-    public ?string $imageUrl;
+    protected ?string $imageUrl;
 
-    public array $ingredients;
+    protected array $ingredients;
 
     public function __construct($name, $tagline, $description, $abv, $ibu, $foodPairing, $imageUrl, $ingredients)
     {
